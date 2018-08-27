@@ -12,7 +12,7 @@ def bank_User(first_name,last_name,pin_number, username, password):
 def log(x, y, z, v, t):
 	lst = [[x, y, z, v, t]]
 	df  = pd.DataFrame(lst)
-	df.to_csv('/Users/julio/Mecha/W3/w3d1/HW_WKND/user_logs/{}.csv'.format(y), index=False, header=False, mode='a')
+	df.to_csv('./user_logs/{}.csv'.format(y), index=False, header=False, mode='a')
 def logging_in():
 	exit = False
 	while exit is not True:

@@ -67,7 +67,7 @@ def logging_in():
 						print("Balance Is: ", acnt.check_balance())
 					elif cmd == 4:
 						print('')
-						df  = pd.read_csv('/Users/julio/Mecha/W3/w3d1/HW_WKND/user_logs/{}.csv'.format(acnt.acnt_num), names=['Date/Time','Account_Num','First','Last','Balance'])
+  						df  = pd.read_csv('./user_logs/{}.csv'.format(acnt.acnt_num), names=['Date/Time','Account_Num','First','Last','Balance'])
 						print(df,'')
 					print('\nAny Additional Request?')
 					print('1. Deposit')
@@ -167,7 +167,7 @@ def analysis():
 
 	print(df)
 	req = input('\n                  Select Account_Num, Then Enter It Here:  ')
-	df  = pd.read_csv('/Users/julio/Mecha/W3/w3d1/HW_WKND/user_logs/{}.csv'.format(req), names=['Date/Time','Account_Num','First','Last','Balance'])
+	df  = pd.read_csv('./user_logs/{}.csv'.format(req), names=['Date/Time','Account_Num','First','Last','Balance'])
 	print(df,'')
 	to_plot = df[['Date/Time','Balance']]
 	x = to_plot.plot(style=['o','rx'],title='Balance History')
